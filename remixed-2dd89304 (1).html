@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green's Ag & Essentials - Service Request</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F5F0E1;
+      color: #2D5A27;
+      padding: 20px;
+    }
+    
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(45, 90, 39, 0.15);
+      border-top: 5px solid #2D5A27;
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    
+    .form-header h1 {
+      color: #2D5A27;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    .form-header p {
+      color: #5a5a5a;
+      font-size: 14px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #2D5A27;
+      font-size: 14px;
+    }
+    
+    .required::after {
+      content: " *";
+      color: #c0392b;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #2D5A27;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      filter: invert(28%) sepia(30%) saturate(1000%) hue-rotate(90deg);
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #2D5A27;
+      cursor: pointer;
+    }
+    
+    .checkbox-item label {
+      font-weight: normal;
+      margin-bottom: 0;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background-color: #2D5A27;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #1e3d1a;
+    }
+    
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Green's Ag & Essentials</h1>
+      <p>Service Request Form</p>
+    </div>
+    
+    <form action="https://formsubmit.co/greensagessentials@gmail.com" method="POST">
+      
+      <div class="form-group">
+        <label for="name" class="required">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+      
+      <div class="form-group">
+        <label for="phone" class="required">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com">
+      </div>
+      
+      <div class="form-group">
+        <label class="required">Which service are you interested in?</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="livestock" name="services" value="Livestock Rental">
+            <label for="livestock">Livestock Rental</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="delivery" name="services" value="Delivery">
+            <label for="delivery">Delivery</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="handyman" name="services" value="Handyman">
+            <label for="handyman">Handyman</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="pressure" name="services" value="Pressure Washing">
+            <label for="pressure">Pressure Washing</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="fence" name="services" value="Fence Building">
+            <label for="fence">Fence Building</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="drone" name="services" value="Drone Services">
+            <label for="drone">Drone Services</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="location" class="required">City / Zip Code</label>
+        <input type="text" id="location" name="location" required placeholder="Enter your city or zip code">
+      </div>
+      
+      <div class="form-group">
+        <label for="date" class="required">Preferred Date</label>
+        <input type="date" id="date" name="preferred_date" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="time" class="required">Preferred Time Slot</label>
+        <select id="time" name="preferred_time" required>
+          <option value="">Select a time slot</option>
+          <option value="Early Morning (6:00 AM - 9:00 AM)">Early Morning (6:00 AM - 9:00 AM)</option>
+          <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+          <option value="Afternoon (12:00 PM - 3:00 PM)">Afternoon (12:00 PM - 3:00 PM)</option>
+          <option value="Late Afternoon (3:00 PM - 6:00 PM)">Late Afternoon (3:00 PM - 6:00 PM)</option>
+          <option value="Evening (6:00 PM - 9:00 PM)">Evening (6:00 PM - 9:00 PM)</option>
+          <option value="Flexible / Any Time">Flexible / Any Time</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="description" class="required">Describe What You Need</label>
+        <textarea id="description" name="description" required placeholder="Please provide details about the service you need..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" placeholder="Any other information you'd like to share..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="referral">How Did You Hear About Us?</label>
+        <select id="referral" name="referral">
+          <option value="">Select an option</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Friend/Family">Friend / Family</option>
+          <option value="Google Search">Google Search</option>
+          <option value="Flyer/Ad">Flyer / Ad</option>
+          <option value="Repeat Customer">Repeat Customer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <button type="submit">Submit Request</button>
+      
+    </form>
+    
+    <div class="form-footer">
+      <p>We'll get back to you as soon as possible!</p>
+    </div>
+  </div>
+</body>
+</html>
